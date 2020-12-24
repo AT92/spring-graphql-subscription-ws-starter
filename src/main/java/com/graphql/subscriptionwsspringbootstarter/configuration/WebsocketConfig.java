@@ -17,7 +17,6 @@ import org.springframework.web.socket.server.support.DefaultHandshakeHandler;
 @Configuration
 @EnableWebSocket
 @RequiredArgsConstructor
-@ConditionalOnProperty(value = "graphql.websockets.enabled", havingValue = "true")
 public class WebsocketConfig implements WebSocketConfigurer {
     @Value("${graphql.websockets.path:/graphql-ws}")
     private String webSocketsHandlerPath;
